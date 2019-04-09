@@ -1,0 +1,72 @@
+class a2duct:
+    def __init__(item,sku, name, price):
+        item.sku=sku
+        item.name=name
+        item.price=price
+  
+
+class Shopping:
+    a1 = []
+
+    def cart(self, a2duct):
+        self.a1 = a2duct
+    def cartItems(self):
+        buy = self.a1
+        return buy
+
+    def getamount(self):
+        buy = self.a1
+        a2=[]
+        for x in buy:
+            a2[x] = a1[x]
+            a3 = []
+            a3 = a1[sku]
+
+        a3count = len(a3)
+
+        amount = 0
+        for y in a3count:
+            if (y=="apple" and a3count[y] >= 3):
+                count = float(int(a3count[y] / 3))
+                amount += (a2[y] *a3count[y]) - (a2[y] * count)
+            elif(y == "ipad"and a3count[y] >= 4):
+                price = 499.99
+                amount += price *a3count[y]
+
+            elif(y =="mac"):
+                vga = a2duct("vga", "VGA​ ​adapter", 0)
+                countkey = a3count[y]
+                if (countkey >= 1):
+                    while (countkey > 0):
+                        self.cart(vga)
+                        countkey-=1
+
+            amount += a2[y] *  a3count[y]  
+            else:
+                amount += a2[y] * a3count[y]
+            return (amount)
+
+ipad = a2duct("ipad", "Super iPad", 549.99)
+mac = a2duct("mac", "MacBook Pro", 1399.99)
+apple = a2duct("apple", "Apple TV", 109.50)
+vga = a2duct("vga", "VGA adapter", 30.00)
+
+checkout = Shopping()
+
+checkout.cart(apple)  
+checkout.cart(apple)  
+checkout.cart(apple)  
+checkout.cart(vga)  
+
+checkout.getamount()  
+print ("<b>Cart items:</b><br>")
+items =  checkout.cartItems()  
+for z in items:
+  print ("+ ". item.item."<br>")
+        
+total =  checkout.getamount()
+print("<b>Total:</b>".(float(total), 2, ".", "")
+
+
+
+
